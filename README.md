@@ -1,22 +1,18 @@
 # PalindroneCheckerApp
 Procedure:
 1.Takes a string as input.
-2.Checks if the string is palindrome using for loop,
+2.Checks if the string is palindrome using for loop and reversing the string.
 3.Prints out the result.
 Flow:
-1.Program starts.
-2.Hardcoded string is checked
-3.Result is printed
-4.Program exits
+1.Reverse string using loop
+2.Compare original and reversed
+3.Display result
 
-Display whether the given hardcoded string is a palindrome or not.
+Display whether the given string is a palindrome by reversing and comparing.
 
 Key Concepts used in UC2:
-1.Class – In Java, even the simplest program must be written inside a class, as a class acts as a container to hold program logic.
-2.Main Method – Entry point of the Java application with the signature public static void main(String[] args).
-3.Static Keyword – Allows the JVM to invoke the main() method without creating an object of the class.
-4.String – A built-in Java class used to store and manipulate textual data. Here, it stores the word to be checked for a palindrome.
-5.String Literal – Text enclosed within double quotes ("madam"), stored in the String constant pool.
-6.Conditional Statement (if-else) – Used to evaluate whether the given string satisfies the palindrome condition.
-
+1.Loop (for loop) – Used to iterate through the characters of the string in reverse order.
+2.String Immutability – In Java, String objects are immutable; every modification creates a new String object.
+3.String Concatenation (+) – Used to build the reversed string character by character (introduced here to later discuss drawbacks).
+4.equals() Method – Used to compare the actual content of two String objects instead of memory references.
 

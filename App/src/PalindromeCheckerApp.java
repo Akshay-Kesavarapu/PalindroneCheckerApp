@@ -2,24 +2,23 @@ import java.util.Scanner;
 
 /**
  * =======================================================
- * MAIN CLASS - UseCase2PalindromeCheckerApp
+ * MAIN CLASS - UseCase3PalindromeCheckerApp
  * ======================================================
  *
- * Use Case 1: Hardcoded Palindrome Validation
+ * Use Case 3: Reverse String Based Palindrome Check
  *
  * Description:
- * This class demonstrates basic palindrome validation
- * using a hardcoded string value.
+ * This class checks whether a string is a Palindrome
+ * by reversing the string and comparing it with
+ * the original value.
  *
  * At this stage, the application:
- * - Starts a predefined string
- * - Compares characters from both ends
- * - Determines whether the string is a palindrome
- * - Displays the result on the console
+ * - Iterates the string in reverse order
+ * - Builds a reversed version
+ * - Compares original and reversed strings
+ * - Displays the validation result
  *
- * This use case introduces fundamental comparison logic
- * before using advanced data structures.
- *
+ * This introduces transformation-based validation.
  *
  * @author Developer
  * @version 1.0
@@ -34,16 +33,15 @@ public class PalindromeCheckerApp{
      */
     public static void main(String[] args) {
         String reverse = "";
-        boolean isPalindrome = true;
         Scanner sc = new Scanner(System.in);
         System.out.print("Input text: ");
         String input = sc.nextLine();
-        for (int i = 0; i < input.length() / 2; i++) {
-            if(input.charAt(i) != input.charAt(input.length() - i -1)){
-                isPalindrome = false;
-                break;
-            }
+        for (int i = input.length()-1; i >= 0; i--) {
+            reverse += input.charAt(i);
         }
-            System.out.println("Is it Palindrome?: " + isPalindrome);
+        if (reverse.equals(input))
+            System.out.println("Is it Palindrome?: " + true);
+        else
+            System.out.println("Is it Palindrome?: " + false);
     }
 }
