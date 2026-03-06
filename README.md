@@ -1,19 +1,19 @@
 # PalindroneCheckerApp
 Procedure:
 1.Takes a string as input.
-2.Checks if the string is palindrome using while loop and reversing the string.
+2.Checks if the string is palindrome using Stack data structure.
 3.Prints out the result.
 Flow:
-1.Convert string to char[]
-2.Use two-pointer approach
-3.Compare start & end characters
+1Push characters into stack
+2.Pop and compare
+3.Print result
 
+Use stack to reverse characters and validate palindrome.
 
-Display whether the given string is a palindrome by converting string into character array.
+Key Concepts used in UC5:
+1.Stack – A linear data structure that follows the Last In First Out (LIFO) principle.
+2.Push Operation – Used to insert characters into the stack.
+3.Pop Operation – Used to remove characters from the stack in reverse order.
+4.Reversal Logic – Stack naturally reverses the order of elements, making it suitable for palindrome validation.
 
-Key Concepts used in UC2:
-1.Character Array (char[]) – A primitive array used to store individual characters of a string for index-based access.
-2.Array Indexing – Accessing elements using index positions starting from 0.
-3.Two-Pointer Technique – One pointer starts from the beginning and the other from the end, reducing unnecessary comparisons.
-4.Time Complexity Awareness – Demonstrates efficient comparison without creating extra objects.
 
