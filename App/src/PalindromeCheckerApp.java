@@ -1,50 +1,55 @@
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * =======================================================
- * MAIN CLASS - UseCase5PalindromeCheckerApp
+ * MAIN CLASS - UseCase6PalindromeCheckerApp
  * ======================================================
  *
- * Use Case 5:  Stack-Based Palindrome Checker
+ * Use Case 6: Queue + Stack Based Palindrome Check
  *
  * Description:
- * This class validates a palindrome by using a stack
- * data structure which follows the LIFO principle.
+ * This class demonstrates palindrome validation using
+ * two different data structures:
+ * - Queue (FIFO - First In First Out)
+ * - Stack (LIFO - Last In First Out)
  *
- * At this stage, the application:
- * - Pushes characters into a stack
- * - Pops them in reverse order
- * - Compares with original sequence
- * - Displays the result
+ * Characters are inserted into both structures and then
+ * compared by removing from the front of the queue and
+ * the top of the stack.
  *
- * This maps stack behavior to reversal logic.
+ * If all characters match, the input string is confirmed
+ * as a palindrome.
+ *
+ * This use case helps understand how FIFO and LIFO
+ * behaviors can be combined for symmetric comparison.
  *
  * @author Developer
- * @version 1.0
+ * @version 6.0
  */
 import java.util.Scanner;
-import java.util.Stack;
 
 public class PalindromeCheckerApp{
     /**
-     * Application entry point for UC5.
+     * Application entry point for UC6.
      *
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
-       String input = "noon";
+       String input = "civic";
+       Queue<Character> queue = new LinkedList<>();
        Stack<Character> stack = new Stack<>();
        for (char c : input.toCharArray()){
            stack.push(c);
+           queue.offer(c);
        }
        boolean isPalindrome = true;
-       for (char c : input.toCharArray()){
-           if(c != stack.pop()){
+       while (!queue.isEmpty()){
+           if(stack.pop() != queue.poll()){
                isPalindrome = false;
                break;
            }
        }
-       System.out.println("Input: " + input);
-       System.out.println("Is Palindrome? : "+isPalindrome);
+       System.out.println("Input : "+input);
+       System.out.println("Is Palindrome? : " + isPalindrome);
     }
 }
