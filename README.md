@@ -5,17 +5,16 @@ Procedure:
 3.Print the result.
 
 Flow:
-1.Convert string to linked list
-2.Reverse second half
-3.Compare halves
+1.Recursive call compares start & end
+2.Base condition exits recursion
 
 
-Check palindrome using singly linked list.
+Check palindrome using recursion.
 
 
 Key Concepts used in UC7:
-1.Singly Linked List – A dynamic data structure where elements are connected using node references.
-2.Node Traversal – Sequential access to elements using next references.
-3.Fast and Slow Pointer Technique – Used to find the middle of the linked list efficiently.
-4.In-Place Reversal – Reverses the second half of the list without extra memory.
+1Recursion – A technique where a method calls itself to solve smaller subproblems.
+2.Base Condition – Prevents infinite recursion and terminates the recursive calls.
+3.Call Stack – Memory structure used to manage method calls during recursion.
+
 
