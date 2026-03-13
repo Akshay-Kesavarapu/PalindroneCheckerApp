@@ -2,26 +2,24 @@ import java.util.*;
 
 /**
  * =======================================================
- * MAIN CLASS - UseCase7PalindromeCheckerApp
+ * MAIN CLASS - UseCase8PalindromeCheckerApp
  * ======================================================
  *
- * Use Case 7: Deqye Based Palindrome Check
+ * Use Case 8: Linked List Based Palindrome Check
  *
  * Description:
- * This class validates a palindrome using a Deque
- * (double ended queue).
+ * This class checks whether a string is a palindrome
+ * using a linked list.
  *
- * Characters are inserted into the deque and then
+ * Characters are added to the list and then
  * compared by removing elements from both ends:
  *
  * - removeFirst()
  * - removeLast()
  *
- * This avoids reversing the string and previous an
- * efficient front-to-back comparison approach.
+ * This demonstrates how the LinkedList supports
+ * double-ended operations for symmetric validation.
  *
- * This use case demonstrates optimal bidirectional
- * traversal using Deque.
  *
  * @author Developer
  * @version 7.0
@@ -35,15 +33,16 @@ public class PalindromeCheckerApp{
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
-      String input = "refer";
-      Deque<Character> deque = new ArrayDeque<>();
+      String input = "level";
+      LinkedList<Character> list = new LinkedList();
       for (char c : input.toCharArray()) {
-          deque.push(c);
+          list.add(c);
       }
-        boolean isPalindrome = true;
-      while (deque.size() > 1) {
-          if(deque.removeFirst() != deque.removeLast()) {
+      boolean isPalindrome = true;
+      while (list.size() > 1) {
+          if (list.removeFirst() != list.removeLast()) {
               isPalindrome = false;
+              break;
           }
       }
       System.out.println("Input : " + input);
