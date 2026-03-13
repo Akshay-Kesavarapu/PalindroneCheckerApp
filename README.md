@@ -5,17 +5,16 @@ Procedure:
 3.Print the result.
 
 Flow:
-1.Create PalindromeChecker class
-2.Expose checkPalindrome() method
+1.Define PalindromeStrategy interface
+2.Implement StackStrategy, DequeStrategy
+3.Inject strategy at runtime
 
-
-
-Encapsulate palindrome logic in a class.
-
+Choose a palindrome algorithm dynamically.
 
 Key Concepts used in UC7:
-1.Encapsulation
-2.Single Responsibility Principle
+1.Interface
+2.Polymorphism
+3.Strategy Pattern
 
 
 
