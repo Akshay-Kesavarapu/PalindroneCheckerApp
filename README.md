@@ -13,7 +13,7 @@ Flow:
 Check palindrome using singly linked list.
 
 
-Key Concepts used in UC7:
+Key Concepts used in UC8:
 1.Singly Linked List – A dynamic data structure where elements are connected using node references.
 2.Node Traversal – Sequential access to elements using next references.
 3.Fast and Slow Pointer Technique – Used to find the middle of the linked list efficiently.
