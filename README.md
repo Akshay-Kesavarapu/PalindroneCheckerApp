@@ -5,16 +5,15 @@ Procedure:
 3.Print the result.
 
 Flow:
-1.Recursive call compares start & end
-2.Base condition exits recursion
+1.Normalize string
+2.Apply previous logic
 
 
-Check palindrome using recursion.
+Ignore spaces and case while checking a palindrome.
 
 
 Key Concepts used in UC7:
-1Recursion – A technique where a method calls itself to solve smaller subproblems.
-2.Base Condition – Prevents infinite recursion and terminates the recursive calls.
-3.Call Stack – Memory structure used to manage method calls during recursion.
+1.String preprocessing
+2.Regular expressions
 
 
