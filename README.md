@@ -5,15 +5,17 @@ Procedure:
 3.Print the result.
 
 Flow:
-1.Normalize string
-2.Apply previous logic
+1.Create PalindromeChecker class
+2.Expose checkPalindrome() method
 
 
-Ignore spaces and case while checking a palindrome.
+
+Encapsulate palindrome logic in a class.
 
 
 Key Concepts used in UC7:
-1.String preprocessing
-2.Regular expressions
+1.Encapsulation
+2.Single Responsibility Principle
+
 
 
