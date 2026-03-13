@@ -1,21 +1,28 @@
 import java.util.*;
-//useCase 6:Queue + Stack Based Palindrome Check
 public class PalindromeCheckerApp {
+    public static boolean isPalindrome(String input) {
+        String normalized = input.replaceAll("\\s+", "").toLowerCase();
 
-    public static boolean isPalindrome(String str, int start, int end) {
-        if (start >= end) {
-            return true;
+        for (int i = 0; i < normalized.length() / 2; i++) {
+            if (normalized.charAt(i) !=
+                    normalized.charAt(normalized.length() - 1 - i)) {
+                return false;
+            }
         }
-        if (str.charAt(start) != str.charAt(end)) {
-            return false;
-        }
-        return isPalindrome(str, start + 1, end - 1);
+        return true;
     }
 
     public static void main(String[] args) {
-        String input = "level";
-        boolean result = isPalindrome(input, 0, input.length() - 1);
-        System.out.println("Input: " + input);
-        System.out.println("Is Palindrome? : " + result);
+        System.out.println("Welcome to Palindrome Checker App Management System");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string to check palindrome: ");
+        String input = scanner.nextLine();
+        boolean result = isPalindrome(input);
+        if (result) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not Palindrome");
+        }
+        scanner.close();
     }
 }
