@@ -11,7 +11,7 @@ Flow:
 
 Demonstrate FIFO vs LIFO using Queue and Stack.
 
-Key Concepts used in UC5:
+Key Concepts used in UC6:
 1.Queue – A linear data structure that follows the First In First Out (FIFO) principle.
 2.Enqueue & Dequeue Operations – Used to insert and remove elements from the queue.
 3.Stack vs Queue – Demonstrates the behavioral difference between LIFO and FIFO structures.
